@@ -1,0 +1,32 @@
+﻿@model ModelBindingSample.Models.Person
+
+@{
+    ViewBag.Title = "ComplexResult2";
+}
+
+<h2>ComplexResult2</h2>
+
+<div class="form-group">
+    <label>Person ID</label>
+    @Html.DisplayFor(m=>m.PersonId)
+</div>
+<div class="form-group">
+    <label>First Name</label>
+    @Html.DisplayFor(m => m.FirstName)
+</div>
+<div class="form-group">
+    <label>Last Name</label>
+    @Html.DisplayFor(m => m.LastName)
+</div>
+<div class="form-group">
+    <label>City</label>
+    @Html.DisplayFor(m => m.HomeAddress.City)
+</div>
+<div class="form-group">
+    <label>State</label>
+    @Html.DisplayFor(m => m.HomeAddress.State)
+</div>
+<div class="form-group">
+    <label>Zip</label>
+    @Html.DisplayFor(m => m.HomeAddress.Zip)
+</div>

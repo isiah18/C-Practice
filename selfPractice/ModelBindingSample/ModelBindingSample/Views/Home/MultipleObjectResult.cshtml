@@ -1,0 +1,26 @@
+﻿@model List<ModelBindingSample.Models.Address>
+@{
+    ViewBag.Title = "MultipleObjectResult";
+}
+
+<h2>MultipleObjectResult</h2>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var addr in Model)
+        {
+            <tr>
+                <td>@addr.City</td>
+                <td>@addr.State</td>
+                <td>@addr.Zip</td>
+            </tr>
+        }
+    </tbody>
+</table>

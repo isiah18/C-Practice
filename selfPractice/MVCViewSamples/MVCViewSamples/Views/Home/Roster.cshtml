@@ -1,0 +1,25 @@
+﻿@model List<MVCViewSamples.Models.Player>
+@{
+    ViewBag.Title = "Roster";
+}
+
+<h2>Roster</h2>
+
+@Html.ActionLink("Home Page", "Index", "Home", null, new {@class="btn btn-primary"})
+
+<a href="/Home/About"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> About Us</a>
+
+<table>
+    
+        
+@foreach (var player in Model)
+{
+    <tr>
+        <td>Partial view to right</td>
+        <td>@Html.Partial("_Player", player)</td>
+    </tr>
+}
+    
+</table>
+
+
